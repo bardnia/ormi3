@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div{
+            /* 원하는 크기:100*60 */
+            /* 실제 적용된 크기 160*120 */
+            /* 160 :100 + padding20*2 + border10*2 */
+            /* width: 100px;
+            height: 50px; */
+            width: 100px;
+            height: 60px;
+            box-sizing: border-box;
+            /* padding: 20px; */
+            padding: 40px 30px 20px 10px;/*상우하좌 시계방향*/
+            padding: 40px 30px 20px;/*40 30 20 30*/
+            padding: 40px 30px;/*40 30 40 30*/
+            margin: 20px auto;/*수평로 정령만 됨*/
+            margin: 20px 0 20px auto;
+            
+            border: 10px solid black;
+        }
+
+        span{
+            padding: 20px;
+            border: 10px solid black;
+            margin: 0 20px;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>box</div>
+    <span>inline</span>
+    <button type="button">버튼</button>
+</body>
+</html>
