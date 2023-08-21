@@ -23,7 +23,7 @@
             <label for="user-name">닉네임</label>
             <input id="user-name" type="text" name="user-name"><br>
 
-            <fieldset >
+            <fieldset class="field">
                 <legend>성별</legend>
                 <ul>
                     <li>
@@ -41,8 +41,8 @@
                 </ul>
             </fieldset>
 
-            <fieldset>
-                <legend>사용 기술</legend>
+            <div class="field-flex">
+                <p>사용 기술</p>
                 <ul>
                     <li>
                         <input type="checkbox" name="HTML" id="HTML">
@@ -73,7 +73,7 @@
                         <label for="PostgreSQL">PostgreSQL</label>
                     </li>
                 </ul>
-            </fieldset>
+            </div>
 
             <input type="submit" value="회원가입">
         </form>

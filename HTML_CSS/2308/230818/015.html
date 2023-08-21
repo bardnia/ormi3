@@ -6,11 +6,15 @@
     <title>우선순위</title>
     <style>
         /* 단일지정을 하지 않을경우 후자가 우선순위가 된다. */
-        .hello{
+        #hello {
+            color: violet !important;
+        }
+
+        .hello {
             color: green;
         }
         p{
-            color: red;
+            color: red !important;
             background-color: skyblue;
         }
 
@@ -18,11 +22,14 @@
         p{
             color: blue;
         }
+
+        /* [class="hello"] {} */
     </style>
 </head>
 
 <body>
-    <p class="hello" id="hello" style="color: gold;">안녕하세요</p>
+    <p class="hello" id="hello" style="color: gold !important;">안녕하세요</p>
+    <p>안녕하세요</p>
 
 </body>
 </html>

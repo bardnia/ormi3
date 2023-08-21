@@ -18,9 +18,10 @@
             margin: 20px;
         }
         .parent{
-            /* background-color: skyblue;
-            padding: 50px; */
-            border: 1px solid transparent;/*투명화처리*/
+            background-color: skyblue;
+            /* padding: 50px; */
+            overflow: hidden;
+            /* border: 1px solid transparent;투명화처리 */
         }
         .child{
             width: 100px;
@@ -34,7 +35,8 @@
 <body>
     <div class="a">A</div>
     <div class="b">B</div>
-    <div class="parent">A</div>
-    <div class="child"></div>
+    <div class="parent">
+        <div class="child">A</div>
+    </div>
 </body>
 </html>
