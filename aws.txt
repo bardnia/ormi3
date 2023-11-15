@@ -135,7 +135,7 @@ sudo systemctl restart sshd
 sudo systemctl status sshd
 
 (cmd로 입력)
-ssh 유저이름@ip
+ssh 유저이름@ip(43.201.110.207)
 그럼 연결됨.
 or
 ssh 키 다운
@@ -144,5 +144,68 @@ cmd에 ssh -i (ssh파일 본인 위치\이름)@ip
 
 
 
+11-15 
+
+
+----------------------------------------------------------------
+
+설정 - 새 프로필
+
+
+su / root로 로그인
+sudo visudo 추가한 계정에 ALL
+
+sudo apt update
+sudo apt upgrade
+
+sudo apt install zsh
+chsh -s $(which zsh)
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+source .zshrc
+
+
+
+--
+git switch master
+git status
+git -h
+git branch
+git branch -c main
+git branch
+git switch main
+
+--
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+vim .zshrc 에서 plugins 안에 zsh-autosuggestions 추가
+source .zshrc
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+cd .oh-my-zsh/plugins에 저장된다.
+
+vim .zshrc 에서 plugins 안에 zsh-syntax-highlighting 추가
+source .zshrc
+
+sudo apt-get install autojump
+vim .zshrc 에서 plugins 안에 autojump 추가
+source .zshrc
+
+--
+
+set.txt파일이 있는 곳으로 가서 scp set.txt bardnia@43.201.110.207:~/app입력 == bardnia/app 안에 파일이 들어간다.
+
+scp {filename} chicken@{ip주소}:~/app
+---
+우분투 파이어 월
+sudo ufw statusdf
+결과 inactive == 정상
+---
+
+원격연결하고 가상환경부터 시작해서 작업하면 된다.
+
+sudo vim /etc/nginx/sites-enabled/default == nginx 기본 설정 파일
 
 
